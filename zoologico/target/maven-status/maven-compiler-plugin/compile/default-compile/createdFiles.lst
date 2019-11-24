@@ -1,0 +1,10 @@
+com\allan\zoologico\Animales.class
+com\allan\zoologico\AnimalesController$AnimalesControllerConverter.class
+com\allan\zoologico\AnimalesController.class
+com\allan\zoologico\util\JsfUtil$PersistAction.class
+com\allan\zoologico\SelectOneMenuView.class
+com\allan\zoologico\Animales_.class
+com\allan\zoologico\AbstractFacade.class
+com\allan\zoologico\util\JsfUtil.class
+com\allan\zoologico\LoginBean.class
+com\allan\zoologico\AnimalesFacade.class

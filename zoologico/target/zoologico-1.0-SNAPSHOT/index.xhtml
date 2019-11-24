@@ -1,0 +1,39 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+     <h:head>
+         <meta title="Sistema - Autenticación"/>
+     </h:head>
+     <h:body>
+            <div style="text-align: center; max-width: 100%; align-content: center; position: relative;"> 
+                <div style="max-width: 1077px; display:block; text-align:center; margin: auto; position: absolute; left:0; right: 0; top: 0; bottom: 0;">
+                    <div class="layout" align="center" style="width: 350px; height: 150px; margin: 0 auto; border: 1px solid #1d295b; border-radius: 6px; background-color: #1d295b; margin-top: 10px">
+                        <h1 style="color: #ffffff">Autenticación</h1>
+                        <p style="color: #ffffff">¡Bienvenido al Sistema!</p>
+                        <p:messages id="messages" showDetail="true" closable="true" showIcon="false" showSummary="false"/>
+                        <h:form id="loginForm">
+                            <p:panel id="loginPnl" style="width: 98%; height: 100%; margin: 0 auto; text-align: center;" >
+                                <div>
+                                <h:panelGrid columns="1" >
+                                    <p style="color: black">Por favor Autentíquese para Ingresar</p>
+                                    <p:inputText id="username" style="width: 300px" value="#{loginBean.user}" required="true"  requiredMessage="Debe indicar el Nombre de Usuario"
+                                                 placeholder="Ingrese aquí su usuario"
+                                                 title="Ingrese aquí su usuario"></p:inputText>
+                                    <h:link value="He olvidado mi usuario" outcome="/faces/forms/construccion.xhtml" style="color:#1d295b; font-size: 80%"/>  
+                                    <p:password id="password" value="#{loginBean.password}"
+                                                feedback="false"  required="true" requiredMessage="Debe indicar la Clave de Usuario" title="Ingrese aquí su clave" 
+                                                placeholder="Ingrese aquí su clave"  style="width: 300px"></p:password>
+                                    <p:commandButton id="loginButton" action="#{loginBean.loginProject()}" 
+                                                     value="Autenticar"  ajax="true" style="text-align: center" class="sistema-button">
+                                    </p:commandButton>
+                                </h:panelGrid>
+                                </div>
+                            </p:panel>
+                        </h:form>
+                    </div>
+                </div>
+            </div>
+     </h:body>
+</html>
